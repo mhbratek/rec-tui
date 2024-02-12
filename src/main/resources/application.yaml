@@ -1,0 +1,5 @@
+github:
+  api:
+    token: #<TOKEN>
+    pageSize: 100
+    base-url: https://api.github.com

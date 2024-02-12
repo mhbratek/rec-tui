@@ -1,0 +1,5 @@
+github:
+  api:
+    token: test
+    pageSize: 4
+    base-url: http://localhost:8089

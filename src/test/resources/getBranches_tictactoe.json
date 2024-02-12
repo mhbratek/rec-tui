@@ -1,0 +1,18 @@
+[
+  {
+    "name": "development_v01",
+    "commit": {
+      "sha": "1ee4b22ae394efddf0d6ea2ebe2e4bdc9cb2dbc5",
+      "url": "https://api.github.com/repos/mhbratek/TicTacToe/commits/1ee4b22ae394efddf0d6ea2ebe2e4bdc9cb2dbc5"
+    },
+    "protected": false
+  },
+  {
+    "name": "master",
+    "commit": {
+      "sha": "62473a6f049e818b31dc2fcda436bbe814ffeca1",
+      "url": "https://api.github.com/repos/mhbratek/TicTacToe/commits/62473a6f049e818b31dc2fcda436bbe814ffeca1"
+    },
+    "protected": false
+  }
+]

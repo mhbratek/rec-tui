@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+
+  MyHttpApi:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      Name: MyHttpAPI
+      ProtocolType: HTTP
+
+  MyHttpApiStage:
+    Type: AWS::ApiGatewayV2::Stage
+    Properties:
+      ApiId: !Ref MyHttpApi
+      StageName: prod
+      AutoDeploy: true
+
+  MyHttpApiIntegration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref MyHttpApi
+      IntegrationType: HTTP_PROXY
+      IntegrationMethod: ANY
+      IntegrationUri: "http://MyECSLoadBalancer-521115365.eu-central-1.elb.amazonaws.com:8080/{proxy}"
+      PayloadFormatVersion: "1.0"
+      TimeoutInMillis: 30000
+
+  MyHttpApiRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref MyHttpApi
+      RouteKey: ANY /{proxy+}
+      Target: !Join
+        - ''
+        - - 'integrations/'
+          - !Ref MyHttpApiIntegration
+
+Outputs:
+  HttpApiUrl:
+    Description: "HTTP API endpoint URL"
+    Value: !Sub "https://${MyHttpApi}.execute-api.${AWS::Region}.amazonaws.com/prod"

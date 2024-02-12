@@ -1,0 +1,52 @@
+openapi: 3.0.1
+info:
+  title: GitHub Repositories API
+  description: API for fetching GitHub repositories.
+  version: "1.0"
+servers:
+  - url: http://localhost:8080/
+paths:
+  /v1/repositories/{username}:
+    get:
+      summary: Get all repositories for a given username
+      description: Fetches all non-fork GitHub repositories owned by the specified username.
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+          description: GitHub username
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Repository'
+        '404':
+          description: User not found
+        '406':
+          description: Only application/json format is supported
+components:
+  schemas:
+    Repository:
+      type: object
+      properties:
+        name:
+          type: string
+        owner:
+          type: string
+        branches:
+          type: array
+          items:
+            $ref: '#/components/schemas/Branch'
+    Branch:
+      type: object
+      properties:
+        name:
+          type: string
+        lastCommitSha:
+          type: string

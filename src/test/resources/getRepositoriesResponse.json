@@ -1,0 +1,54 @@
+[
+  {
+    "name": "robot",
+    "ownerLogin": "mhbratek",
+    "branches": [
+      {
+        "name": "devs",
+        "lastCommitSha": "21a84dc58cbbb44cad4a502fe48fea6971dca55d"
+      },
+      {
+        "name": "feature_webScrapper",
+        "lastCommitSha": "1a91572f7d062d288403acdd7df13893f0d13eae"
+      },
+      {
+        "name": "future_webscrapers_refactor",
+        "lastCommitSha": "674af01bbe3bf089ca7f148a4bc5c2cf35c079ec"
+      },
+      {
+        "name": "googleBooks",
+        "lastCommitSha": "e7df9f04fcb2c470b542de7c50ee8ebf83b7fd60"
+      },
+      {
+        "name": "master",
+        "lastCommitSha": "562b1ff66b7b1800d3f892b3212bc0b883d98cb0"
+      },
+      {
+        "name": "modules",
+        "lastCommitSha": "8ee3972a7adcb4e88f78c3ef02146648a51a3b1c"
+      },
+      {
+        "name": "persistence",
+        "lastCommitSha": "8fbb1034bfa5ecaf8bd9f09804309338b3ea5bd3"
+      },
+      {
+        "name": "tests",
+        "lastCommitSha": "a1a74faa2a648b1343c582fcc92c16f81d27671b"
+      }
+    ]
+  },
+  {
+    "name": "TicTacToe",
+    "ownerLogin": "mhbratek",
+    "branches": [
+      {
+        "name": "development_v01",
+        "lastCommitSha": "1ee4b22ae394efddf0d6ea2ebe2e4bdc9cb2dbc5"
+      },
+      {
+        "name": "master",
+        "lastCommitSha": "62473a6f049e818b31dc2fcda436bbe814ffeca1"
+      }
+    ]
+  }
+]
